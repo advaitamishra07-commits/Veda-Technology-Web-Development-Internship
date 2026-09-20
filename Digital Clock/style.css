@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: Arial, sans-serif;
+
+    /* Blue-Purple Gradient Background */
+    background: linear-gradient(
+        135deg,
+        #1e1b4b,
+        #312e81,
+        #1e3a8a,
+        #0f172a
+    );
+
+    color: white;
+}
+
+.clock-container {
+    width: 90%;
+    max-width: 650px;
+    text-align: center;
+}
+
+.greeting {
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: #c7d2fe;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 42px;
+    margin-bottom: 30px;
+}
+
+/* Clock Box */
+
+.clock-box {
+    padding: 35px 30px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.2);
+
+    border-radius: 20px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.35);
+
+    backdrop-filter: blur(10px);
+}
+
+#clock {
+    font-size: 72px;
+    font-weight: bold;
+    letter-spacing: 8px;
+
+    /* Soft glow around the clock */
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+#date {
+    margin-top: 25px;
+    font-size: 18px;
+    color: #e0e7ff;
+}
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .clock-box {
+        padding: 25px 15px;
+    }
+
+    #clock {
+        font-size: 42px;
+        letter-spacing: 4px;
+    }
+
+    #date {
+        font-size: 15px;
+    }
+}
