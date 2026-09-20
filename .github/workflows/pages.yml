@@ -29,7 +29,7 @@ jobs:
       - name: Upload Task 3 Website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './Task3-Resume-Website'
+          path: './path: './Digital Clock''
 
       - name: Deploy to GitHub Pages
         id: deployment
