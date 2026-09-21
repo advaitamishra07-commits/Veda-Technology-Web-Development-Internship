@@ -1,4 +1,4 @@
-name: Deploy Task 4 Digital Clock
+name: Deploy Internship Websites
 
 on:
   push:
@@ -26,12 +26,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload Task 4 Website
+      - name: Upload Internship Websites
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './Digital Clock'
+          path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-  
