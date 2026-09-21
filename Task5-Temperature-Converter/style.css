@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(99, 102, 241, 0.35), transparent 30%),
+        radial-gradient(circle at 85% 80%, rgba(168, 85, 247, 0.3), transparent 30%),
+        linear-gradient(135deg, #0f172a, #1e1b4b);
+}
+
+/* Main Card */
+
+.converter-card {
+    width: 100%;
+    max-width: 480px;
+    padding: 42px;
+    border-radius: 28px;
+
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px 1px rgba(255, 255, 255, 0.1);
+
+    animation: cardAppear 0.7s ease;
+}
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+/* Input Groups */
+
+.input-group {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    margin-bottom: 9px;
+
+    color: #e2e8f0;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* Inputs */
+
+input {
+    width: 100%;
+    padding: 15px 17px;
+
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+
+    outline: none;
+    transition: all 0.25s ease;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:hover {
+    background: rgba(255, 255, 255, 0.11);
+}
+
+input:focus {
+    border-color: #818cf8;
+
+    background: rgba(255, 255, 255, 0.12);
+
+    box-shadow:
+        0 0 0 4px rgba(129, 140, 248, 0.15),
+        0 8px 25px rgba(99, 102, 241, 0.12);
+}
+
+/* Remove number input arrows */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+/* Error Message */
+
+#error-message {
+    min-height: 22px;
+    margin: 5px 0 15px;
+
+    text-align: center;
+    color: #fca5a5;
+
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* Button */
+
+button {
+    width: 100%;
+    padding: 15px;
+
+    border: none;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: #ffffff;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(99, 102, 241, 0.3);
+
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 15px 30px rgba(99, 102, 241, 0.4);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Card Animation */
+
+@keyframes cardAppear {
+    from {
+        opacity: 0;
+        transform: translateY(25px) scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 520px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .converter-card {
+        padding: 30px 22px;
+        border-radius: 22px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .subtitle {
+        font-size: 13px;
+    }
+}
