@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f4f1ec;
+    color: #1d1d1d;
+    min-height: 100vh;
+}
+
+/* ---------- HEADER ---------- */
+
+header {
+    max-width: 1200px;
+    margin: auto;
+    padding: 70px 30px 45px;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 7vw, 78px);
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 18px;
+}
+
+header h1::after {
+    content: '';
+    display: block;
+    width: 70px;
+    height: 4px;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    background: #1d1d1d;
+}
+
+header p {
+    margin-top: 22px;
+    color: #777;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+}
+
+/* ---------- GALLERY ---------- */
+
+.gallery {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 70px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+/* ---------- IMAGE CARDS ---------- */
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #ddd;
+    cursor: pointer;
+
+    aspect-ratio: 1 / 1;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    display: block;
+
+    transition: transform 0.6s ease;
+}
+
+/* Hover effect */
+
+.gallery-item::after {
+    content: 'VIEW ↗';
+
+    position: absolute;
+    left: 18px;
+    bottom: 18px;
+
+    padding: 8px 13px;
+
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(8px);
+
+    border-radius: 30px;
+
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+
+    opacity: 0;
+    transform: translateY(10px);
+
+    transition: 0.35s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.08);
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- LIGHTBOX ---------- */
+
+.lightbox {
+    display: none;
+
+    position: fixed;
+    z-index: 1000;
+
+    inset: 0;
+
+    background: rgba(12, 12, 12, 0.94);
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+
+    animation: fadeIn 0.25s ease;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+
+    box-shadow: 0 20px 80px rgba(0, 0, 0, 0.5);
+
+    animation: zoomIn 0.3s ease;
+}
+
+/* ---------- CLOSE BUTTON ---------- */
+
+.close-btn {
+    position: absolute;
+
+    top: 25px;
+    right: 30px;
+
+    width: 48px;
+    height: 48px;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.close-btn:hover {
+    background: white;
+    color: #111;
+    transform: rotate(90deg);
+}
+
+/* ---------- ANIMATIONS ---------- */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    header {
+        padding-top: 55px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ---------- MOBILE ---------- */
+
+@media (max-width: 550px) {
+
+    header {
+        padding: 45px 20px 30px;
+    }
+
+    header h1 {
+        font-size: 44px;
+        letter-spacing: -1px;
+    }
+
+    .gallery {
+        width: 92%;
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .gallery-item {
+        aspect-ratio: 4 / 3;
+    }
+
+    .gallery-item::after {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .lightbox {
+        padding: 15px;
+    }
+
+    .lightbox img {
+        max-width: 95%;
+        max-height: 80vh;
+    }
+
+    .close-btn {
+        top: 15px;
+        right: 15px;
+    }
+}
+.gallery-item::before,
+.gallery-item::after,
+.gallery-item span {
+    pointer-events: none;
+}

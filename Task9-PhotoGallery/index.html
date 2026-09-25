@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Image Gallery</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>My Image Gallery</h1>
+        <p>Explore beautiful moments through images</p>
+    </header>
+
+
+    <!-- Image Gallery -->
+    <main class="gallery">
+
+        <!-- NATURE -->
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
+                alt="Mountain landscape"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e"
+                alt="Mountain lake surrounded by nature"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b"
+                alt="Green mountains and forest"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e"
+                alt="Sunlight through green forest"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+                alt="Lake surrounded by mountains"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429"
+                alt="Beautiful desert landscape"
+                onclick="openLightbox(this)">
+        </div>
+
+
+        <!-- MODERN ARCHITECTURE -->
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625"
+                alt="Modern white building"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2"
+                alt="Modern office interior"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2"
+                alt="Contemporary architecture"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742"
+                alt="Modern building design"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
+                alt="Modern glass skyscraper"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1494526585095-c41746248156"
+                alt="Modern house exterior"
+                onclick="openLightbox(this)">
+        </div>
+
+
+        <!-- FASHION -->
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b"
+                alt="Fashion clothing store"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b"
+                alt="Stylish fashion outfit"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e"
+                alt="Fashion model wearing stylish clothing"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d"
+                alt="Fashion clothing and accessories"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1469334031218-e382a71b716b"
+                alt="Modern fashion outfit"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1445205170230-053b83016050"
+                alt="Fashion boutique"
+                onclick="openLightbox(this)">
+        </div>
+
+
+        <!-- TRAVEL & LIFESTYLE -->
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e"
+                alt="Blue ocean beach"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff"
+                alt="Scenic travel destination"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1"
+                alt="Beautiful lake travel destination"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e"
+                alt="Nature travel landscape"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60"
+                alt="Travel photography"
+                onclick="openLightbox(this)">
+        </div>
+
+        <div class="gallery-item">
+            <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7"
+                alt="Scenic travel destination"
+                onclick="openLightbox(this)">
+        </div>
+
+    </main>
+
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+
+        <button class="close-btn" onclick="closeLightbox()">
+            &times;
+        </button>
+
+        <img id="lightbox-img" src="" alt="Large image preview">
+
+    </div>
+
+
+    <!-- Lightbox JavaScript -->
+    <script>
+        function openLightbox(image) {
+            const lightbox = document.getElementById("lightbox");
+            const lightboxImg = document.getElementById("lightbox-img");
+
+            lightboxImg.src = image.src;
+            lightboxImg.alt = image.alt;
+
+            lightbox.style.display = "flex";
+        }
+
+        function closeLightbox() {
+            const lightbox = document.getElementById("lightbox");
+
+            lightbox.style.display = "none";
+        }
+
+        // Close when clicking outside the image
+        document.getElementById("lightbox").addEventListener("click", function(event) {
+            if (event.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Close with Escape key
+        document.addEventListener("keydown", function(event) {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
