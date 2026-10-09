@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --navy: #172554;
+    --orange: #ff7a35;
+    --light-orange: #fff1e7;
+    --background: #f3f6ff;
+    --muted: #7b849b;
+    --border: #e4e8f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    padding: 30px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--background);
+    background-image:
+        radial-gradient(circle at top left, #ffe5d3, transparent 35%),
+        radial-gradient(circle at bottom right, #dfe7ff, transparent 35%);
+    font-family: 'Poppins', sans-serif;
+    color: var(--navy);
+}
+
+.calculator {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 15px 45px rgba(23, 37, 84, 0.12);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.logo {
+    width: 55px;
+    height: 55px;
+    margin: 0 auto 12px;
+    display: grid;
+    place-items: center;
+    background: var(--light-orange);
+    color: var(--orange);
+    border-radius: 16px;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.subtitle {
+    color: var(--orange);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+}
+
+h1 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.description {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 7px;
+}
+
+.field {
+    margin-bottom: 22px;
+}
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+
+input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+    background: #fafbff;
+    color: var(--navy);
+    font-family: inherit;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 3px rgba(255, 122, 53, 0.12);
+}
+
+.tip-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 7px;
+}
+
+.tip-buttons button {
+    padding: 11px 3px;
+    border: 1px solid var(--border);
+    border-radius: 9px;
+    background: #fafbff;
+    color: var(--navy);
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tip-buttons button:hover {
+    border-color: var(--orange);
+}
+
+.tip-buttons button.active {
+    background: var(--orange);
+    color: white;
+    border-color: var(--orange);
+}
+
+.error {
+    color: #c62828;
+    font-size: 12px;
+    margin-bottom: 12px;
+}
+
+.results {
+    padding: 20px;
+    background: var(--navy);
+    color: white;
+    border-radius: 15px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.result-row:last-child {
+    margin-bottom: 0;
+}
+
+.result-row h3 {
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.result-row p {
+    font-size: 10px;
+    color: #b7c1df;
+    margin-top: 4px;
+}
+
+.result-row span {
+    color: #ff9b64;
+    font-size: 19px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 18px;
+}
+
+.reset-button {
+    width: 100%;
+    padding: 13px;
+    margin-top: 18px;
+    border: none;
+    border-radius: 10px;
+    background: var(--light-orange);
+    color: #e85e1b;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.reset-button:hover {
+    background: #ffe1cd;
+}
+
+footer {
+    margin-top: 18px;
+    font-size: 11px;
+    color: var(--muted);
+}
+
+@media (max-width: 400px) {
+    .calculator {
+        padding: 22px 17px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    .tip-buttons {
+        gap: 5px;
+    }
+
+    .tip-buttons button {
+        font-size: 12px;
+    }
+
+    .result-row span {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="calculator">
+        <header>
+            <div class="logo">%</div>
+            <p class="subtitle">SMART BILL SPLITTER</p>
+            <h1>Tip Calculator</h1>
+            <p class="description">A little appreciation goes a long way.</p>
+        </header>
+
+        <div class="field">
+            <label for="bill">Bill Amount (₹)</label>
+            <input type="number" id="bill" min="0" step="0.01"
+                   placeholder="Enter bill amount">
+        </div>
+
+        <div class="field">
+            <label>Choose Tip Percentage</label>
+            <div class="tip-buttons">
+                <button type="button" data-tip="5">5%</button>
+                <button type="button" data-tip="10">10%</button>
+                <button type="button" data-tip="15" class="active">15%</button>
+                <button type="button" data-tip="20">20%</button>
+                <button type="button" data-tip="25">25%</button>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="customTip">Custom Tip (%)</label>
+            <input type="number" id="customTip" min="0" max="100"
+                   placeholder="Enter custom percentage">
+        </div>
+
+        <div class="field">
+            <label for="people">Number of People</label>
+            <input type="number" id="people" min="1" step="1" value="1">
+        </div>
+
+        <p id="error" class="error" aria-live="polite"></p>
+
+        <div class="results">
+            <div class="result-row">
+                <div>
+                    <h3>Tip Per Person</h3>
+                    <p>Your share of the tip</p>
+                </div>
+                <span id="tipPerPerson">₹0.00</span>
+            </div>
+
+            <div class="result-row">
+                <div>
+                    <h3>Total Per Person</h3>
+                    <p>Including tip</p>
+                </div>
+                <span id="totalPerPerson">₹0.00</span>
+            </div>
+
+            <hr>
+
+            <div class="result-row">
+                <div>
+                    <h3>Total Bill</h3>
+                    <p>Bill plus tip</p>
+                </div>
+                <span id="totalBill">₹0.00</span>
+            </div>
+        </div>
+
+        <button type="button" id="reset" class="reset-button">
+            Reset Calculator
+        </button>
+    </div>
+
+    <footer>Made with care | Tip Calculator</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
